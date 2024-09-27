@@ -25,3 +25,7 @@ Route::group(['prefix'=>'blog','as'=>'blog.'],function(){
 // Route::put('/put');
 // Route::patch('/patch');
 // Route::delete('/delete');
+
+Route::fallback(function(){
+    return "this is not found page";
+});
