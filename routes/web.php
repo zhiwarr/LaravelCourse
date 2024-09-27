@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\BasicController;
+use App\Http\Controllers\ResourceControoler;
+use App\Http\Controllers\SingleActionController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -27,6 +30,11 @@ Route::group(['prefix'=>'blog','as'=>'blog.'],function(){
 // Route::delete('/delete');
 
 Route::view('/contact','contact.index');
+
+
+Route::get('/basic-controller',[BasicController::class,'getPage']);
+Route::get('/single-action',SingleActionController::class);
+Route::resource('/blog',ResourceControoler::class);
 
 Route::fallback(function(){
     return "this is not found page";
