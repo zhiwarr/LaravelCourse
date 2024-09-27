@@ -8,7 +8,7 @@ Route::get('/', function () {
 
 Route::get('/about', function () {
     return "this is about page";
-});
-Route::get('/user/{id}',function($id){
-    return "this is user page with id: $id";
-});
+})->name('about');
+Route::get('/user/{id}/{slug}',function($id,$slug){
+    return "this is user page with id: $id and slug: $slug";
+})->name('user.profile');
