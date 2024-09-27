@@ -24,3 +24,9 @@ $color = 'red';
 @endif
 
 @endsection
+@push('scripts')
+<script>
+    alert('this is contact page')
+
+</script>
+@endpush

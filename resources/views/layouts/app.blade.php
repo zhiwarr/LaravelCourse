@@ -14,6 +14,8 @@
     <a href="{{ route('user.profile',['id'=>1,'slug'=>'zhiwar-osman']) }}">zhiwar</a>
     @yield('content')
     @include('layouts.footer')
+
+    @stack('scripts')
 </body>
 
 </html>
