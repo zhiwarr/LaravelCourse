@@ -20,3 +20,8 @@ Route::group(['prefix'=>'blog','as'=>'blog.'],function(){
         return "this is edit blog page with id: $id";
     });
 });
+// Route::get('/get');
+// Route::post('/post');
+// Route::put('/put');
+// Route::patch('/patch');
+// Route::delete('/delete');
